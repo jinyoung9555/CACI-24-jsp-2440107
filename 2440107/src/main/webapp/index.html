@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test with Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 전반적인 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .top-bar {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .search-cart {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-cart input {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-cart button {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .search-cart a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #007bff;
+            padding: 5px 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-cart a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* 필터 섹션 */
+        .filter {
+            padding: 20px;
+            text-align: center;
+            background-color: #f1f3f5;
+        }
+
+        .filter h2 {
+            margin-bottom: 10px;
+        }
+
+        .filter-buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .filter-buttons button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* 상품 리스트 */
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 10px;
+        }
+
+        .product-info .price {
+            font-weight: bold;
+        }
+
+        .product-info .discount {
+            color: red;
+            font-weight: bold;
+        }
+
+        .product-info .reviews {
+            color: #888;
+        }
+
+        /* 로그아웃 링크 */
+        .logout {
+            margin-left: 15px;
+            font-size: 0.9rem;
+        }
+
+        .logout a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .logout a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="top-bar">
+            <p>APP 전용, 2종 할인 쿠폰</p>
+        </div>
+        <div class="main-header">
+            <div class="logo">MUSINSA</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">신상</a></li>
+                    <li><a href="#">랭킹</a></li>
+                    <li><a href="#">상의</a></li>
+                    <li><a href="#">하의</a></li>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">빅사이즈</a></li>
+                </ul>
+            </nav>
+            <div class="search-cart">
+                <input type="text" placeholder="실시간 인기 상품을 검색하세요">
+                <button>🔍</button>
+                <a href="list.jsp">게시판</a>
+                <button onclick="location.href='login.html'">👤</button>
+                <!-- 로그아웃 링크 -->
+                <span class="logout">
+                    <a href="logout.jsp">로그아웃</a>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 필터 -->
+    <section class="filter">
+        <h2>지금 눈여겨볼 만한 BEST 랭킹</h2>
+        <div class="filter-buttons">
+            <button>전체</button>
+            <button>브랜드</button>
+            <button>신상</button>
+            <button>상의</button>
+            <button>아우터</button>
+            <button>하의</button>
+            <button>스포츠레저</button>
+        </div>
+    </section>
+
+    <!-- 상품 리스트 -->
+    <section class="product-list">
+        <div class="product">
+            <img src="img/product.jpg" alt="Product 1">
+            <div class="product-info">
+                <p>스투시</p>
+                <h3>스투시 반팔</h3>
+                <p>M-3XL</p>
+                <p class="price">44,900원 <span class="discount">41%</span></p>
+                <p class="reviews">리뷰 1,280</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/product2.jpg" alt="Product 2">
+            <div class="product-info">
+                <p>SELECT+</p>
+                <h3>오버핏 니트</h3>
+                <p>XL-3XL</p>
+                <p class="price">79,900원</p>
+                <p class="reviews">리뷰 25</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/product3.jpg" alt="Product 3">
+            <div class="product-info">
+                <p>BYMONO+</p>
+                <h3>1+1 모노 투데이 코듀로이 와이드 팬츠</h3>
+                <p>32-40</p>
+                <p class="price">59,800원 <span class="discount">14%</span></p>
+                <p class="reviews">리뷰 89</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q&A 게시판</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    table {
+        width: 80%;
+        margin: auto;
+        border-collapse: collapse;
+        margin-top: 50px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+    a {
+        text-decoration: none;
+        color: #007BFF;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;">Q&A 게시판</h1>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+        </tr>
+        <!-- 여기서 JSP로 데이터를 가져와 반복 -->
+        <!-- 예시 -->
+        <tr>
+            <td>1</td>
+            <td><a href="view.jsp?id=1">게시글 제목</a></td>
+            <td>작성자</td>
+            <td>2023-12-01</td>
+        </tr>
+        <!-- 반복 끝 -->
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="write.html">게시글 작성하기</a>
+    </div>
+</body>
+</html>
